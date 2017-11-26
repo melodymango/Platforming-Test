@@ -160,3 +160,6 @@ MonoBehaviour:
   player: {fileID: 0}
   canClick: 0
   isHolding: 0
+  cc: {fileID: 0}
+  rb: {fileID: 0}
+  bc: {fileID: 0}
