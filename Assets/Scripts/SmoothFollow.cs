@@ -1,3 +1,5 @@
+/* camera black magic to follow the player around. somehow makes deaths look stylish because the camera snaps back to the player :D*/
+
 using UnityEngine;
 using System.Collections;
 using Prime31;

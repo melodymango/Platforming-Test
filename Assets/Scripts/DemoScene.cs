@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/* MELODY'S NOTES!!!
+ * 
+ * THIS SEEMS TO TAKE CARE OF THE ACTUAL KEYPRESSES, JUMPING, AND ONE-WAY PLATFORMS!!!*/
+
+using UnityEngine;
 using System.Collections;
 using Prime31;
 

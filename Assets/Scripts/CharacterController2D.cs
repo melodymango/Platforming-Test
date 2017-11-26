@@ -1,4 +1,8 @@
-﻿#define DEBUG_CC2D_RAYS
+﻿/* MELODY'S NOTES!!!!
+ * 
+ * THIS SEEMS TO TAKE CARE OF COLLISIONS AND WALKING SMOOTHLY UP/DOWN SLOPES!!!*/
+
+#define DEBUG_CC2D_RAYS
 using UnityEngine;
 using System;
 using System.Collections.Generic;
