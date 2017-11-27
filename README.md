@@ -8,7 +8,14 @@ W to jump
 
 S to fall below a one-way platform
 
+Left-Click to pick up an item (must be in range of the item)
+
+E to drop item
+
 ### CREDITS ###
 CharacterController2D.cs and DemoScene.cs || taken from https://github.com/prime31/CharacterController2D and modified
 
 angrychoco.png || taken from FINAL FANTASY XIV
+
+### STUFF I NEED TO DO ###
+- visual feedback on the pickups to show the player when they are able to pick it up
