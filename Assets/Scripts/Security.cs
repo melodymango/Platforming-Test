@@ -9,6 +9,7 @@ public class Security : MonoBehaviour {
 
     //need to check if the player is holding an item to determine whether the trigger goes off
     public bool isHold;
+    //public Pickup pscript;
 
     public GameObject doors;
 
@@ -29,12 +30,12 @@ public class Security : MonoBehaviour {
         //checks whether the player is holding an item upon entering the security trigger
         if (c.gameObject.tag == "Player" && c.gameObject.transform.childCount > 0)
         {
-            Pickup pscript = c.gameObject.GetComponentInChildren<Pickup>();
-            isHold = pscript.isHolding;
-            if (isHold)
-            {
-                Debug.Log("is hold!!!");
-            }
+            //pscript = c.gameObject.GetComponentInChildren<Pickup>();
+            isHold = true;
+        }
+        else
+        {
+            isHold = false;
         }
     }
 

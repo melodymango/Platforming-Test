@@ -26,7 +26,7 @@ public class Pickup : MonoBehaviour {
     private void Update()
     {
         //checking if the item isn't being carried by the player
-        if (gameObject.transform.parent == null)
+        if (gameObject.transform.parent != player.transform)
         {
             isHolding = false;
             canClick = true;
