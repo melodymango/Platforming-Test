@@ -9,20 +9,13 @@ public class Pickup : MonoBehaviour {
     public GameObject player;
     public bool canClick;
     public bool isHolding;
-    public CircleCollider2D cc;
-    public Rigidbody2D rb;
-    public BoxCollider2D bc;
 
     //Make a reference to the player
-    //Get all colliders/rigidbodies because we need to disable them if the object gets picked up by the player
     //canClick = whether the player can pick up the item or not
     //isHolding = whether the player is currently holding the item or not
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        cc = this.gameObject.GetComponent<CircleCollider2D>();
-        rb = this.gameObject.GetComponent<Rigidbody2D>();
-        bc = this.gameObject.GetComponent<BoxCollider2D>();
         canClick = false;
         isHolding = false;
     }
@@ -34,11 +27,6 @@ public class Pickup : MonoBehaviour {
         {
             isHolding = false;
             canClick = true;
-
-            //re-enabling colliders & recreating rigidbody so the player will be able to pick the item up again
-            cc.enabled = !cc.enabled;
-            bc.enabled = !bc.enabled;
-            this.gameObject.AddComponent<Rigidbody2D>();
         }
     }
 
@@ -65,12 +53,6 @@ public class Pickup : MonoBehaviour {
             //player can't pick up anymore items because they're holding one
             canClick = false;
             isHolding = true;
-
-            //have to disable colliders and delete the rigidbody because they set off the triggers for the security doors
-            //the player should be the only thing setting off the trigger
-            cc.enabled = !cc.enabled;
-            bc.enabled = !bc.enabled;
-            Destroy(rb);
         }
     }
 }

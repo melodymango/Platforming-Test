@@ -21,15 +21,21 @@ public class SecurityChild : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger Enter at: " + this.transform.position);
-        pScript.TriggerEnter(collision);
+        if (collision.gameObject.tag == "Player")
+        { 
+            Debug.Log("Trigger Enter at: " + this.transform.position);
+            pScript.TriggerEnter(collision);
+        }
     }
 
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Trigger Exit at: " + this.transform.position);
-        pScript.TriggerExit(collision);
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Trigger Exit at: " + this.transform.position);
+            pScript.TriggerExit(collision);
+        }
     }
 
 }
