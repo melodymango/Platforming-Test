@@ -9,6 +9,8 @@ public class Pickup : MonoBehaviour {
     public GameObject player;
     public bool canClick;
     public bool isHolding;
+    public Rigidbody2D rb;
+    public BoxCollider2D bc;
 
     //Make a reference to the player
     //canClick = whether the player can pick up the item or not
@@ -18,6 +20,7 @@ public class Pickup : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         canClick = false;
         isHolding = false;
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -27,6 +30,13 @@ public class Pickup : MonoBehaviour {
         {
             isHolding = false;
             canClick = true;
+
+            if (gameObject.GetComponent<Rigidbody2D>() == null)
+            { 
+                gameObject.AddComponent<Rigidbody2D>();
+                rb = gameObject.GetComponent<Rigidbody2D>();
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+            }
         }
     }
 
@@ -46,9 +56,12 @@ public class Pickup : MonoBehaviour {
         if (canClick)
         {
             //Make the item a child of the player, currently the player is carrying it on their head lol
+            //also make it so it doesn't get jostled around when the player is carrying it
+            //by freezing the x position
             gameObject.transform.parent = player.transform;
             gameObject.transform.position = player.transform.position;
             transform.localPosition = new Vector3(0, 0.5f, 0);
+            Destroy(rb);
 
             //player can't pick up anymore items because they're holding one
             canClick = false;

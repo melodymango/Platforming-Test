@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!58 &58612848597672192
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -160,6 +160,4 @@ MonoBehaviour:
   player: {fileID: 0}
   canClick: 0
   isHolding: 0
-  cc: {fileID: 0}
   rb: {fileID: 0}
-  bc: {fileID: 0}

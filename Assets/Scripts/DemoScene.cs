@@ -113,11 +113,16 @@ public class DemoScene : MonoBehaviour
 		// grab our current _velocity to use as a base for all calculations
 		_velocity = _controller.velocity;
 
+
+        //MELODY'S ADDITIONAL CODE
+
+        // if the player falls off the map, transport back to tge start
         if(_controller.transform.position.y <= -10)
         {
             _controller.transform.position = new Vector3(-3, 1, 0);
         }
 
+        // drop whatever item the player is holding
         if (Input.GetKey(KeyCode.E))
         {
             transform.DetachChildren();
