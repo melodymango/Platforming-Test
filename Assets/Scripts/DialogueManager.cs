@@ -6,6 +6,7 @@ public class DialogueManager : MonoBehaviour {
 
     public GameObject player;
     public DemoScene movement;
+    public Transform speech;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,9 @@ public class DialogueManager : MonoBehaviour {
     {
         Debug.Log("Dialogue started with " + name);
         movement.canMove = false;
+        //GameObject speechbubble = Instantiate(speech, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        Instantiate(speech, new Vector3(0, 0, 0), Quaternion.identity);
+        //speechbubble.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
     }
 
     
