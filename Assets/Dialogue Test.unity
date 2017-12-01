@@ -155,7 +155,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2048056049}
     - target: {fileID: 1304398506328858, guid: 04871dcb710dbc04e9b97f71f54181b3, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -172,11 +172,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4115371222119778, guid: f50d38c1b7479074b9f15b8d3156a863, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.655139
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 4115371222119778, guid: f50d38c1b7479074b9f15b8d3156a863, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.11031926
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 4115371222119778, guid: f50d38c1b7479074b9f15b8d3156a863, type: 2}
       propertyPath: m_LocalPosition.z
@@ -205,6 +205,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f50d38c1b7479074b9f15b8d3156a863, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2048056049 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4115371222119778, guid: f50d38c1b7479074b9f15b8d3156a863,
+    type: 2}
+  m_PrefabInternal: {fileID: 1180459729}
 --- !u!1001 &2131682267
 Prefab:
   m_ObjectHideFlags: 0
