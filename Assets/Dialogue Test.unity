@@ -152,8 +152,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  npc: {fileID: 0}
   movement: {fileID: 0}
-  speech: {fileID: 4001942150638066, guid: 97ed428471d51764a982d142ef4c7fa9, type: 2}
+  speech_transform: {fileID: 0}
+  speech_prefab: {fileID: 4001942150638066, guid: 97ed428471d51764a982d142ef4c7fa9,
+    type: 2}
 --- !u!4 &312684241
 Transform:
   m_ObjectHideFlags: 0
@@ -272,8 +275,8 @@ GameObject:
   - component: {fileID: 1792622327}
   - component: {fileID: 1792622326}
   m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
+  m_Name: DialogueCanvas
+  m_TagString: Dialogue Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -475,7 +478,7 @@ GameObject:
   - component: {fileID: 2142804523}
   m_Layer: 0
   m_Name: Cornelia
-  m_TagString: Untagged
+  m_TagString: Cornelia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -574,3 +577,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m: {fileID: 0}
+  store: {fileID: 0}

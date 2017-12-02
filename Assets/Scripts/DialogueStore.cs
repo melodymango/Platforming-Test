@@ -12,6 +12,7 @@ public class DialogueStore : MonoBehaviour
         Lobby1 = new SortedDictionary<int, string>();
 
         Lobby1.Add(1, "Oh! My, my, a new guest, is it?");
+        Lobby1.Add(2, "Well, I suppose it’s about time! I expected you to be here hours ago. I swear, that Cabbie gets slower and slower every day.");
     }
 
 }

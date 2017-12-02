@@ -8,6 +8,8 @@ TagManager:
   - DialogueManager
   - Speech
   - Canvas
+  - Dialogue Canvas
+  - Cornelia
   layers:
   - Default
   - TransparentFX
